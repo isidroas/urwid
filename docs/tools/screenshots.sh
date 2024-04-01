@@ -16,13 +16,16 @@ done
 export RXVTWINDOWID
 image=${1%.py}
 
-c=1
+sleep 0.5  # I think that this is only needed at startup. If skipped, the first capture is always blank
+
+counter=1 # from c to avoid confusion with c++
 while read -r line; do
 	# the echo trick is needed to expand RXVTWINDOWID variable
-	echo $line | xdotool -
 	echo "sending $line"
-	import -window "$RXVTWINDOWID" "${image}$c.png"
-	(( c++ ))
+	echo $line | xdotool -
+
+	import -window "$RXVTWINDOWID" "${image}$counter.png"
+	(( counter++ ))
 done
 
 kill $RXVTPID
