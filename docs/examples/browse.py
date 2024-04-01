@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
-from __future__ import annotations
-
 import os
+import socket
 
 import real_browse
 
-os.chdir("/usr/share/doc/python")
+os.chdir(os.path.dirname(socket.__file__))
 real_browse.main()
