@@ -320,7 +320,7 @@ class Widget(metaclass=WidgetMeta):
         or if they are always selectable they may
         set the :attr:`_selectable` class variable to ``True``.
 
-        If this method returns ``True`` then the :meth:`.keypress` method
+        If this method returns ``True`` then the :meth:`keypress` method
         must be implemented.
 
         Returning ``False`` does not guarantee that this widget will never be in
