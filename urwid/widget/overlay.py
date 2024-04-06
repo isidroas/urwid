@@ -130,24 +130,25 @@ class Overlay(Widget, WidgetContainerMixin, WidgetContainerListContentsMixin, ty
             (``'relative'``, *percentage* 0=left 100=right)
         :type align: Literal["left", "center", "right"] | tuple[Literal["relative"], int]
         :param width: width type, one of:
-            ``'pack'``
-              if *top_w* is a fixed widget
-            *given width*
-              integer number of columns wide
-            (``'relative'``, *percentage of total width*)
-              make *top_w* width related to container width
+
+            * ``'pack'``
+                if *top_w* is a fixed widget
+            * *given width*
+                integer number of columns wide
+            * (``'relative'``, *percentage of total width*)
+                make *top_w* width related to container width
         :type width: Literal["pack"] | int | tuple[Literal["relative"], int]
-        :param valign: alignment mode, one of ``'top'``, ``'middle'``, ``'bottom'`` or
-            (``'relative'``, *percentage* 0=top 100=bottom)
+        :param valign: alignment mode, one of ``'top'``, ``'middle'``, ``'bottom'`` or (``'relative'``, *percentage* 0=top 100=bottom)
         :type valign: Literal["top", "middle", "bottom"] | tuple[Literal["relative"], int]
-        :param height: one of:
-            ``'pack'``
-              if *top_w* is a flow or fixed widget
-            *given height*
-              integer number of rows high
-            (``'relative'``, *percentage of total height*)
-              make *top_w* height related to container height
         :type height: Literal["pack"] | int | tuple[Literal["relative"], int]
+        :param height: one of:
+
+            * ``'pack'``
+                if *top_w* is a flow or fixed widget
+            * *given height*
+                integer number of rows high
+            * (``'relative'``, *percentage of total height*)
+                make *top_w* height related to container height
         :param min_width: the minimum number of columns for *top_w* when width is not fixed.
         :type min_width: int
         :param min_height: minimum number of rows for *top_w* when height is not fixed.
