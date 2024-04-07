@@ -653,7 +653,8 @@ class Button(WidgetWrap[Columns]):
         :param layout: defaults to a shared :class:`StandardTextLayout` instance
         :type layout: text layout instance
 
-        ..note:: `pack` method expect, that `Columns` backend widget is not modified from outside
+        .. note::
+            `pack` method expect, that `Columns` backend widget is not modified from outside
 
         Signals supported: ``'click'``
 
