@@ -7,9 +7,9 @@ import urwid
 palette = [("I say", "default,bold", "default", "bold")]
 ask = urwid.Edit(("I say", "What is your name?\n"))
 reply = urwid.Text("")
-button_inst = urwid.Button("Exit")
+button = urwid.Button("Exit")
 div = urwid.Divider()
-pile = urwid.Pile([ask, div, reply, div, button_inst])
+pile = urwid.Pile([ask, div, reply, div, button])
 top = urwid.Filler(pile, valign="top")
 
 
@@ -22,6 +22,6 @@ def on_exit_clicked(_button: urwid.Button) -> typing.NoReturn:
 
 
 urwid.connect_signal(ask, "change", on_ask_change)
-urwid.connect_signal(button_inst, "click", on_exit_clicked)
+urwid.connect_signal(button, "click", on_exit_clicked)
 
 urwid.MainLoop(top, palette).run()
